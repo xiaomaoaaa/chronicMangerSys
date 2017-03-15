@@ -1,0 +1,18 @@
+配置config的proxyTable 可以解决跨域问题， 
+修改config 要修改端口和重启服务 这样才可以看到更新
+
+
+异步获取数据的时候 this 要先定义 赋值给一个变量， 因为异步的回调函数的内部this指向XHR
+对象
+
+用vue-resoure 返回的数据直接传给属性data了 需要注意
+
+
+editmember  nav  imgupload  这三个暂时可以不要
+
+数据获取之后 立即用
+ this.$nextTick(function () {
+                   console.log($("#memberlist .operationtd"));
+                  });
+
+就可以获取循环中的dom
